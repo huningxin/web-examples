@@ -9,7 +9,8 @@
 <script type="text/javascript">
 var video = document.getElementById("demo");
 
-navigator.getUserMedia({video: true, audio: true}, onSuccess, onError);
+navigator.getUserMedia({video: true, audio: true},
+                       onSuccess, onError);
 
 function onSuccess(stream) {
   video.srcObject = stream;
