@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>WebRTC Basic</h2>
+
+<video id="demo" autoplay playsinline></video>
+
+<script type="text/javascript">
+var video = document.getElementById("demo");
+
+navigator.getUserMedia({video: true, audio: true}, onSuccess, onError);
+
+function onSuccess(stream) {
+  video.srcObject = stream;
+}
+
+function onError(error) {
+  alert(error);
+}
+</script>
+</body>
+</html>
